@@ -1,13 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import LoginForm from './component/loginPage/loginForm';
 
-function App() {
-  return (
-    <div>
-      <h1>Hello world</h1>
-    </div>
-  );
+class App extends React.Component {
+  render(){
+    return( 
+      <React.Fragment>
+        <div>
+        </div>
+        <LoginForm />
+      </React.Fragment>
+    )
+  };
 }
 
 export default App;
