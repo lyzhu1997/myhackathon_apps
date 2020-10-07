@@ -1,11 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Preregistration from './Preregistration.js';
 
 function App() {
   return (
     <div>
-      <h1>Hello world</h1>
+      <Preregistration/>
     </div>
   );
 }

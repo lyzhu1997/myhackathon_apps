@@ -1,0 +1,13 @@
+.bg {
+    background: linear-gradient(to right, #430089, #82ffa1)
+}
+
+label {
+    color: white;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
