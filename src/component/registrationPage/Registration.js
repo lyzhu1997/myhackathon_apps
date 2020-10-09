@@ -10,13 +10,13 @@ class Registration extends React.Component {
         super(props);
         this.state={
             userData:{
-                Name:"",
-                IC:"",
+                citizenship:"",
                 dob:"",
-                placeOfBirth:"",
-                parentName:"",
+                ic:"",
+                name:"",
                 parentIC:"",
-                citizenship:""
+                parentName:"",
+                placeOfBirth:""
             },
             MYstates:[
                 "",
@@ -41,46 +41,8 @@ class Registration extends React.Component {
     }
 
     onChange(e,item) {
-        switch(item){
-            case "name":
-                this.setState({userData:{
-                    ...this.state.userData,
-                    Name:item
-                }});
-                break;
-            case "ic":
-                this.setState({userData:{
-                    ...this.state.userData,
-                    IC:item,
-                }});
-            case "dob":
-                this.setState({userData:{
-                    ...this.state.userData,
-                    dob:item,
-                }});
-            case "placeOfBirth":
-                this.setState({userData:{
-                    ...this.state.userData,
-                    placeOfBirth:item,
-                }});
-            case "parentName":
-                this.setState({userData:{
-                    ...this.state.userData,
-                    parentName:item,
-                }});
-            case "parentIC":
-                this.setState({userData:{
-                    ...this.state.userData,
-                    parentIC:item,
-                }});
-            case "citizenship":
-                this.setState({userData:{
-                    ...this.state.userData,
-                    citizenship:item,
-                }});
-            default:
-                break;
-        }
+
+        this.setState({userData:{...this.state.userData, [item]: e.target.value}});
     }
 
     onSubmit = (data) => console.log(data);
@@ -88,60 +50,27 @@ class Registration extends React.Component {
         const {MYstates} = this.state;
         return (
             <div className="bg">
-                <div>
-                    <form onSubmit={()=>this.onSubmit()}>
-                        <div className="form-group row">
-                            <label className="col-sm-2 col-form-label" onClick={()=>this.onSubmit(this.state.userData)}>Name</label>
-                            <div className="col-sm-10">
-                                <input className="form-control" type='text' name='name' onChange={(e)=>this.onChange(e,"name")}/><br/>
-                            </div>
-                        </div>
+                <div className="rectangle">
+                    <form>
+                        <div className="title">Register</div>
+                        <input placeholder="IC" className="textLong" type='text' name='ic' onChange={(e)=>this.onChange(e,"ic")}/><br/>
+                        <input className="textShortLeft" type="text" placeholder="First Name" onChange={(e)=>this.onChange(e,"firstName")}></input>
+                        <input className="textShortRight" type="text" placeholder="Last Name"onChange={(e)=>this.onChange(e,"lastName")}></input>
+                        <input className="textLong" type="date" placeholder="Date of Birth"onChange={(e)=>this.onChange(e,"dob")}></input>
+                        <select className="textLong" onChange={(e)=>this.onChange(e,"placeOfBirth")} name='placeOfBirth' >
+                            {MYstates.map((state,key)=>(
+                                <option key={key} value={state}>{state}</option>
+                            ))}
+                        </select>
+                        <input className="textLong" type="text" placeholder="Parent / Next-Of-Kin name" onChange={(e)=>this.onChange(e,"parentName")}></input>
+                        <input className="textLong" type="text" placeholder="Parent / Next-Of-Kin IC number" onChange={(e)=>this.onChange(e,"parentIC")}></input>
+                        <select className="textLong" onChange={(e)=>this.onChange(e,"citizenship")} name="citizenship">
+                            <option value=''></option>
+                            <option value='malaysian'>Malaysian</option>
+                            <option value='nonmalaysian'>Non Malaysian</option>
+                        </select>
                         
-                        <div className="form-group row">
-                            <label className="col-sm-2 col-form-label">IC</label>
-                            <div className="col-sm-10">
-                                <input className="form-control" type='text' name='ic' onChange={(e)=>this.onChange(e,"ic")}/><br/>
-                            </div>
-                        </div>
-                        
-                        <div className="form-group row">
-                            <label className="col-sm-2 col-form-label">Date of Birth</label><br/>
-                            <div className="col-sm-10">
-                                <input className="form-control" name='birthdate' type='date' onChange={(e)=>this.onChange(e,"dob")}/><br/>
-                            </div>
-                        </div>
-                        
-                        <div className="form-group row">
-                            <label className="col-sm-2 col-form-label">Place of Birth</label>
-                            <div className="col-sm-10">
-                                <select className="form-control" onChange={(e)=>this.onChange(e,"placeOfBirth")} name='placeOfBirth' >
-                                    {MYstates.map((state)=>(
-                                        <option value={state}>{state}</option>
-                                    ))}
-                                </select><br/>
-                            </div>
-                            
-                        </div>
-                        
-                        <div className="form-group row">
-                            <label className="col-sm-2 col-form-label">Parent Info / Next-of-Kin info</label>
-                            <div className="col-sm-10">
-                                <input className="form-control" type='text' placeholder='Name' name='parentName' onChange={(e)=>this.onChange(e,"parentName")}/><br/>
-                                <input className="form-control" type='text' placeholder='IC' name='parentIC'  onChange={(e)=>this.onChange(e,"parentIC")}/><br/>
-                            </div>
-                        </div>
-                        
-                        <div className="form-group row">
-                            <label className="col-sm-2 col-form-label">Citizenship status</label>
-                            <div className="col-sm-10">
-                                <select className="form-control" onChange={(e)=>this.onChange(e,"citizenship")} name="citizenship">
-                                    <option value='malaysian'>Malaysian</option>
-                                    <option value='nonmalaysian'>Non Malaysian</option>
-                                </select><br/>
-                            </div>
-                        </div>
-                        
-                        <button className="btn btn-primary center" onClick={()=>this.onSubmit(this.state.userData)}>submit</button>
+                        <button className="submitBttn" onClick={()=>this.onSubmit(this.state.userData)}>Register</button>
                     </form>
                 </div>
             </div>

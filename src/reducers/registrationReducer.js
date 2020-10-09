@@ -14,9 +14,8 @@ const initialState={
     isSubmit:false,
     data:{
         name:"",
-        IC:"",
-        familyName:"",
-        dateOfBirth:"",
+        ic:"",
+        dob:"",
         placeOfBirth:"",
         parentName:"",
         parentIC:"",

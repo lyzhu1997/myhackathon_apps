@@ -4,19 +4,14 @@ import { connect,useDispatch } from "react-redux";
 import Preregistration from './component/registrationPage/Preregistration.js';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import DummyWebPage from "./component/dummyWebPage/dummyWebpage";
+import Registration from './component/registrationPage/Registration';
 
 class App extends React.Component {
   render(){
     return( 
-      <React.Fragment>
-        <div className="App">
-          <div className="auth-wrapper">
-            <div className="auth-inner">
-              <Preregistration />
-            </div>
-          </div>
-        </div>
-      </React.Fragment>
+      <div>
+        <Registration />
+      </div>
     )
   };
 }

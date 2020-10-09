@@ -1,13 +1,79 @@
-.bg {
-    background: linear-gradient(to right, #430089, #82ffa1)
+body{
+    background-color: lightblue;
 }
 
-label {
-    color: white;
+.rectangle{
+    margin: 50px auto;
+    width: 692px;
+    height: 900px;
+    left: 424px;
+    bottom: 109px;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 15px;
 }
 
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.title{
+    margin-top: 10px;
+    margin: 25px 275px;
+    height: 49px;
+    width: 140px;
+    top: 174px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 49px;
+    /* identical to box height */
+
+
+    color: #1372A8;
+}
+
+.textLong{
+    margin: 15px 152.5px;
+    width: 385px;
+    height: 55px;
+    background: #F7F8F9;
+    border: 1px solid #9F9E9E;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.textShortLeft{
+    margin: 15px 8px 15px 152.5px;
+    display: inline-block;
+    width:185px;
+    height: 55px;
+    background: #F7F8F9;
+    border: 1px solid #9F9E9E;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.textShortRight{
+    margin: 15px 150px 15px 8px;
+    display: inline-block;
+    width:185px;
+    height: 55px;
+    background: #F7F8F9;
+    border: 1px solid #9F9E9E;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.submitBttn{
+    margin: 15px 152.5px;
+    width: 385px;
+    height: 55px;
+    background: #2190CF;
+    border-radius: 5px;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+    color: #FFFFFF;
+    
 }
