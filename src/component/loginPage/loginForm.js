@@ -42,8 +42,14 @@ class LoginForm extends React.Component {
             const {isRegis, isLoggedIn} = this.props;
             return( 
                 <div>
-                {(!isRegis && !isLoggedIn) && (<form>
-                        <h3>Login Page</h3>
+                <div className="container-fluid">
+                <div className="row h-100">
+                    <div className="col-5">
+                    <img class="brand-logo" src="../src/assets/Logo.png" alt="logo"/>
+                {(!isRegis && !isLoggedIn) && (
+                <div className="main-content">
+                <form className="signin-form">
+                        <h2 class="text-center">Sign In</h2>
                         <div className="form-group">
                             <label>Name:</label>
                             <input type="text" className="form-control" placeholder="Enter name" onChange={(e)=>this.handleChange(e, "username")}/>
@@ -60,11 +66,22 @@ class LoginForm extends React.Component {
                         <button type="submit" className="btn btn-primary btn-block"  onClick={(e)=>this.handleSubmit(e, true)}>
                             Login With MYID
                         </button>
-                </form>)}
+                </form>
+                <div class="col-7 px-0">
+                    <img class="cover-img" src="../../assets/cover.jpg" alt="cover image"/>
+                </div>
+
+                </div>
+                )}
+                </div>
+                </div>
+                </div>
+
+                <div>
                 {isRegis && <Preregistration/>}
                 {isLoggedIn && <Homepage/>}
                 </div>
-                    
+                </div>
             )
     };
 }

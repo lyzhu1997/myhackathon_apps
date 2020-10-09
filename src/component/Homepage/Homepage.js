@@ -1,9 +1,9 @@
+import React from "react";
 import { connect } from "react-redux";
 import { appStartRun, appSuccessfullyLaunched } from "../../actions/appStartActions"
-import React from "react";
 import './Homepage.css';
-import { Profile } from '../Profile/Profile.js'; 
-import { Service } from '../Service/Service.js';
+import Profile from '../Profile/Profile.js'; 
+import Service from '../Service/Service.js';
 import {
     BrowserRouter as Router,
     Switch,
