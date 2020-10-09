@@ -34,7 +34,7 @@ class Homepage extends React.Component{
             <Router>
             <div>
                 <div class="navbar navbar-expand-lg navbar-light bg-white">
-                    <a class="navbar-brand" href="#"><img class="brand-logo" src="../../assets/Logo.png" alt="Logo"/></a> 
+                    <a class="navbar-brand" href="#"><img class="brand-logo" src={require("../../assets/Logo.png")} alt="Logo"/></a> 
                 </div>
                 <nav class="navbar navbar-expand-lg navbar-dark blue-nav">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -138,21 +138,21 @@ class Homepage extends React.Component{
                         <div class="row h-400px px-5">
                             <div class="col-4">
                                 <div class="card h-100 shadow-sm">
-                                    <img src="../../assets/card1.jpg" class="card-img-top" alt="people discussion"/>
+                                    <img src={require("../../assets/card1.jpg")} class="card-img-top" alt="people discussion"/>
                                     <div class="card-body">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="card h-100 shadow-sm">
-                                    <img src="../../assets/card2.jpg" class="card-img-top" alt="Children"/>
+                                    <img src={require("../../assets/card2.jpg")} class="card-img-top" alt="Children"/>
                                     <div class="card-body">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="card h-100 shadow-sm">
-                                    <img src="../../assets/card3.jpg" class="card-img-top" alt="Children"></img>
+                                    <img src={require("../../assets/card3.jpg")} class="card-img-top" alt="Children"></img>
                                     <div class="card-body">
                                     </div>
                                 </div>

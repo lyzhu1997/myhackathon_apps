@@ -1,4 +1,5 @@
 import React from "react";
+import './Service.css';
 
 class Service extends React.Component {
     constructor(props) {
@@ -16,7 +17,7 @@ class Service extends React.Component {
                             <div class="card service-card shadow-sm">
                                 <div class="row">
                                     <div class="col-4 d-flex align-items-center justify-content-center">
-                                        <img src="./assets/ServicesPic/JPN.png" alt="JPN Logo"/>
+                                        <img src={require("../../assets/ServicesPic/JPN.png")} alt="JPN Logo"/>
                                     </div>
                                     <div class="col-8">
                                         <h6>Immigration Department of Malaysia</h6>
@@ -31,7 +32,7 @@ class Service extends React.Component {
                             <div class="card service-card shadow-sm">
                                 <div class="row">
                                     <div class="col-4 d-flex align-items-center justify-content-center">
-                                        <img src="./assets/ServicesPic/KKM.png" alt="KKM Logo"/>
+                                        <img src={require("../../assets/ServicesPic/KKM.png")} alt="KKM Logo"/>
                                     </div>
                                     <div class="col-8">
                                         <h6>Ministry of Health of Malaysia</h6>
@@ -46,7 +47,7 @@ class Service extends React.Component {
                             <div class="card service-card shadow-sm">
                                 <div class="row">
                                     <div class="col-4 d-flex align-items-center justify-content-center">
-                                        <img src="./assets/ServicesPic/JPJ.svg" alt="JPJ Logo"/>
+                                        <img src={require("../../assets/ServicesPic/JPJ.svg")} alt="JPJ Logo"/>
                                     </div>
                                     <div class="col-8">
                                         <h6>Road Transport Department Malaysia</h6>
@@ -61,7 +62,7 @@ class Service extends React.Component {
                             <div class="card service-card shadow-sm">
                                 <div class="row">
                                     <div class="col-4 d-flex align-items-center justify-content-center">
-                                        <img src="./assets/ServicesPic/IDM.png" alt="IDM Logo"/>
+                                        <img src={require("../../assets/ServicesPic/IDM.png")} alt="IDM Logo"/>
                                     </div>
                                     <div class="col-8">
                                         <h6>Immigration Department of Malaysia</h6>
@@ -76,7 +77,7 @@ class Service extends React.Component {
                             <div class="card service-card shadow-sm">
                                 <div class="row">
                                     <div class="col-4 d-flex align-items-center justify-content-center">
-                                        <img src="./assets/ServicesPic/KPDNHEP.png" alt="KPDNHEP Logo"/>
+                                        <img src={require("../../assets/ServicesPic/KPDNHEP.png")} alt="KPDNHEP Logo"/>
                                     </div>
                                     <div class="col-8">
                                         <h6>Ministry of Domestic Trade and Consumer Affairs</h6>
@@ -91,7 +92,7 @@ class Service extends React.Component {
                             <div class="card service-card shadow-sm">
                                 <div class="row">
                                     <div class="col-4 d-flex align-items-center justify-content-center">
-                                        <img src="./assets/ServicesPic/PDM.png" alt="JPN Logo"/>
+                                        <img src={require("../../assets/ServicesPic/PDM.png")} alt="JPN Logo"/>
                                     </div>
                                     <div class="col-8">
                                         <h6>Royal Malaysia Police</h6>
