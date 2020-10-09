@@ -17,7 +17,26 @@ class Registration extends React.Component {
                 parentName:"",
                 parentIC:"",
                 citizenship:""
-            }
+            },
+            MYstates:[
+                "",
+                "Kedah",
+                "Perak",
+                "Kuala Lumpur",
+                "Pulau Pinang",
+                "Perlis",
+                "Kelantan",
+                "Kedah",
+                "Johor",
+                "Terengganu",
+                "Sabah",
+                "Sarawak",
+                "Putrajaya",
+                "Melaka",
+                "Pahang",
+                "Negeri Sembilan",
+                "Selangor"
+            ]
         }
     }
 
@@ -66,6 +85,7 @@ class Registration extends React.Component {
 
     onSubmit = (data) => console.log(data);
     render(){
+        const {MYstates} = this.state;
         return (
             <div className="bg">
                 <div>
@@ -95,11 +115,9 @@ class Registration extends React.Component {
                             <label className="col-sm-2 col-form-label">Place of Birth</label>
                             <div className="col-sm-10">
                                 <select className="form-control" onChange={(e)=>this.onChange(e,"placeOfBirth")} name='placeOfBirth' >
-                                    <option value='kedah'>Kedah</option>
-                                    <option value='perlis'>Perlis</option>
-                                    <option value='penang'>Penang</option>
-                                    <option value='kelantan'>Kelantan</option>
-                                    <option value='perak'>Perak</option>
+                                    {MYstates.map((state)=>(
+                                        <option value={state}>{state}</option>
+                                    ))}
                                 </select><br/>
                             </div>
                             
