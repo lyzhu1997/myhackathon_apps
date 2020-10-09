@@ -1,8 +1,7 @@
 import { 
     IS_LOGIN_INTO_ACC,
     LOG_INTO_ACC 
-} from "../actions/loginFormActions";
-
+} from "../actions/loginFormActions"; 
 const initialState = {
     isLoading : false,
     isLoggedIn : false,
@@ -10,7 +9,7 @@ const initialState = {
 }
 
 
-const loginFormReducer = (state = initialState,action) => {
+const loginFormReducer= (state = initialState,action) => {
     switch(action.type){
         case LOG_INTO_ACC:
             return{

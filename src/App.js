@@ -1,21 +1,34 @@
 import React from 'react';
 import './App.css';
-import Preregistration from './Preregistration.js';
-
-// import './App.css';
-import LoginForm from './component/loginPage/loginForm';
+import { connect,useDispatch } from "react-redux";
+import Preregistration from './component/registrationPage/Preregistration.js';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import DummyWebPage from "./component/dummyWebPage/dummyWebpage";
 
 class App extends React.Component {
   render(){
     return( 
       <React.Fragment>
-        <div>
-          <Preregistration/>
+        <div className="App">
+          <div className="auth-wrapper">
+            <div className="auth-inner">
+              <Preregistration />
+            </div>
+          </div>
         </div>
-        {/* <LoginForm /> */}
       </React.Fragment>
     )
   };
 }
 
-export default App;
+const mapStateToProps = (state,ownProps) => state;
+const mapDispatchToProps = (dispatch) => {
+    return{
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps,
+)(App);
+

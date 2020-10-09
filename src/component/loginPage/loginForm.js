@@ -1,7 +1,7 @@
 import React from 'react';
-import { Dispatch } from "redux";
-import { connect,useDispatch } from "react-redux";
-import { isLoginIntoAcc } from "../../actions/loginFormActions"
+import { connect } from "react-redux";
+import { isLoginIntoAcc } from "../../actions/loginFormActions";
+import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 class LoginForm extends React.Component {
     state ={
@@ -12,40 +12,34 @@ class LoginForm extends React.Component {
 
     componentDidMount(){
         const { isLoginIntoAcc } = this.props;
+        console.log("check Run")
         isLoginIntoAcc();
     }
 
+
     render(){
-        if(this.state.isLoading==false&&this.state.isLoggedIn==false)
             return( 
-                <div className="loginForm">
-                    <h3>Login Page</h3>
                     <form>
-                        <label>
-                            Name:
-                        </label>
-                        <input type="text" name="name" />
-                        <br />
-                        <label>
-                            Password:
-                        </label>
-                        <input type="password" name="password"/>
-                        <br />
-                        <button>
+                        <h3>Login Page</h3>
+                        <div className="form-group">
+                            <label>Name:</label>
+                            <input type="text" className="form-control" placeholder="Enter name" />
+                        </div>
+                        <div className="form-group">
+                            <label>
+                                Password:
+                            </label>
+                            <input type="password" className="form-control" placeholder="Enter password"/>
+                        </div>
+                        <button type="submit" className="btn btn-primary btn-block">
                             Login
                         </button>
-                        <button>
-                            Login With
+                        <button type="submit" className="btn btn-primary btn-block" >
+                            Login With MYID
                         </button>
                     </form>
 
-                </div>
             )
-        else return(
-            <div>
-                You have already logged in!
-            </div>
-        )
     };
 }
 
