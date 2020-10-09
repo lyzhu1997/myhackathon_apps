@@ -44,7 +44,8 @@ class Registration extends React.Component {
 
     onSubmit = (data) => console.log(data);
     render(){
-        const {userData, MYstates} = this.state;
+        const {MYstates} = this.state;
+        const {data} = this.props;
         return (
             <div className="bg">
                 <div>
@@ -52,14 +53,14 @@ class Registration extends React.Component {
                         <div className="form-group row">
                             <label className="col-sm-2 col-form-label" onClick={()=>this.onSubmit(this.state.userData)}>Name</label>
                             <div className="col-sm-10">
-                                <input className="form-control" type='text' value={userData.name} name='name' onChange={(e)=>this.onChange(e,"name")}/><br/>
+                                <input className="form-control" type='text' value={data.name} name='name' onChange={(e)=>this.onChange(e,"name")}/><br/>
                             </div>
                         </div>
                         
                         <div className="form-group row">
                             <label className="col-sm-2 col-form-label">IC</label>
                             <div className="col-sm-10">
-                                <input className="form-control" type='text' value={MYstates.IC} name='ic' onChange={(e)=>this.onChange(e,"ic")}/><br/>
+                                <input className="form-control" type='text' value={data.IC} name='ic' onChange={(e)=>this.onChange(e,"ic")}/><br/>
                             </div>
                         </div>
                         
@@ -73,7 +74,7 @@ class Registration extends React.Component {
                         <div className="form-group row">
                             <label className="col-sm-2 col-form-label">Place of Birth</label>
                             <div className="col-sm-10">
-                                <select className="form-control" onChange={(e)=>this.onChange(e,"placeOfBirth")} value={MYstates.placeOfBirth} name='placeOfBirth' >
+                                <select className="form-control" onChange={(e)=>this.onChange(e,"placeOfBirth")} value={data.placeOfBirth} name='placeOfBirth' >
                                     {MYstates.map((state)=>(
                                         <option value={state}>{state}</option>
                                     ))}
@@ -85,15 +86,15 @@ class Registration extends React.Component {
                         <div className="form-group row">
                             <label className="col-sm-2 col-form-label">Parent Info / Next-of-Kin info</label>
                             <div className="col-sm-10">
-                                <input className="form-control" type='text' placeholder='Name' name='parentName' onChange={(e)=>this.onChange(e,"parentName")}/><br/>
-                                <input className="form-control" type='text' placeholder='IC' name='parentIC'  onChange={(e)=>this.onChange(e,"parentIC")}/><br/>
+                                <input className="form-control" type='text' placeholder='Name' name='parentName' value={data.parentName} onChange={(e)=>this.onChange(e,"parentName")}/><br/>
+                                <input className="form-control" type='text' placeholder='IC' name='parentIC'  value={data.parentIC} onChange={(e)=>this.onChange(e,"parentIC")}/><br/>
                             </div>
                         </div>
                         
                         <div className="form-group row">
                             <label className="col-sm-2 col-form-label">Citizenship status</label>
                             <div className="col-sm-10">
-                                <select className="form-control" onChange={(e)=>this.onChange(e,"citizenship")} name="citizenship">
+                                <select className="form-control" onChange={(e)=>this.onChange(e,"citizenship")} value={data.citizenship} name="citizenship">
                                     <option value='malaysian'>Malaysian</option>
                                     <option value='nonmalaysian'>Non Malaysian</option>
                                 </select><br/>
