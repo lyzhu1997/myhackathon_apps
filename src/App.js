@@ -10,7 +10,7 @@ class App extends React.Component {
     return( 
       <React.Fragment>
         <div className="App">
-              <Registration />
+              <LoginForm />
             </div>
       </React.Fragment>
     )
