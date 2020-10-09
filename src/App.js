@@ -1,17 +1,17 @@
 import React from 'react';
 import './App.css';
-import { connect,useDispatch } from "react-redux";
-import Preregistration from './component/registrationPage/Preregistration.js';
+import { connect } from "react-redux";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import DummyWebPage from "./component/dummyWebPage/dummyWebpage";
-import Registration from './component/registrationPage/Registration';
+import LoginForm from './component/loginPage/loginForm.js';
 
 class App extends React.Component {
   render(){
     return( 
-      <div>
-        <Registration />
-      </div>
+      <React.Fragment>
+        <div className="App">
+              <LoginForm />
+            </div>
+      </React.Fragment>
     )
   };
 }

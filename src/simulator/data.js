@@ -3,7 +3,7 @@ export default class simulator{
         fakeData : [
             {
                 name:"VINCENT",
-                IC:"123456-12-1234",
+                IC:"123456-12-1244",
                 familyName: "LOW",
                 dateOfBirth: "2000/01/01",
                 placeOfBirth: "Gurun,Kedah",
@@ -29,8 +29,8 @@ export default class simulator{
     }
 
     checkData(IC){
-        const check = false;
-        const data = null;
+        let check = false;
+        let data = null;
         this.data.fakeData.map((dat)=>{
             if(dat.IC===IC){
                 check = true;

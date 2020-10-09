@@ -12,3 +12,10 @@ export function isLoginIntoAcc(){
         type: "IS_LOGIN_INTO_ACC"
     };
 }
+
+export const IS_REGIS_WITH_MYID = "IS_REGIS_WITH_MYID";
+export function isRegisWithMyid() {
+    return {
+        type: "IS_REGIS_WITH_MYID"
+    };
+}

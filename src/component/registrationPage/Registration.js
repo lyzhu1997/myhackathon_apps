@@ -1,7 +1,5 @@
 import React from 'react';
-import { useForm } from 'react-hook-form';
 import './registration.css';
-import data from '../../data';
 import { connect } from 'react-redux';
 
 class Registration extends React.Component {
@@ -48,6 +46,7 @@ class Registration extends React.Component {
     onSubmit = (data) => console.log(data);
     render(){
         const {MYstates} = this.state;
+        const {data} = this.props;
         return (
             <div className="bg">
                 <div className="rectangle">

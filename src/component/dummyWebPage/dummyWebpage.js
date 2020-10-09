@@ -3,7 +3,7 @@ import { appStartRun, appSuccessfullyLaunched } from "../../actions/appStartActi
 import React from "react";
 
 
-class dummyWebPage extends React.Component{
+class DummyWebPage extends React.Component{
 
     constructor(props){
         super(props);
@@ -22,26 +22,9 @@ class dummyWebPage extends React.Component{
 
     render(){
         return( 
-                <form>
-                    <h3>Login Page</h3>
-                    <div className="form-group">
-                        <label>Name:</label>
-                        <input type="text" className="form-control" placeholder="Enter name" />
-                    </div>
-                    <div className="form-group">
-                        <label>
-                            Password:
-                        </label>
-                        <input type="password" className="form-control" placeholder="Enter password"/>
-                    </div>
-                    <button type="submit" className="btn btn-primary btn-block">
-                        Login
-                    </button>
-                    <button type="submit" className="btn btn-primary btn-block" >
-                        Login With MYID
-                    </button>
-                </form>
-
+            <div>
+                <h1>HOMEPAGE</h1>
+            </div>
         )
     };
 
@@ -56,4 +39,4 @@ const mapDispatchToProps = (dispatch,ownProps) => {
     }
 };
 
-export default connect(mapStateToProps,mapDispatchToProps)(dummyWebPage);
+export default connect(mapStateToProps,mapDispatchToProps)(DummyWebPage);
