@@ -56,17 +56,17 @@ class Registration extends React.Component {
                         <input className="textShortLeft" type="text" value={data.name} placeholder="First Name" onChange={(e)=>this.onChange(e,"firstName")}></input>
                         <input className="textShortRight" type="text" value={data.familyName} placeholder="Last Name"onChange={(e)=>this.onChange(e,"lastName")}></input>
                         <input className="textLong" type="date" placeholder="Date of Birth"onChange={(e)=>this.onChange(e,"dob")}></input>
-                        <select className="textLong" selected={data.placeOfBirth} onChange={(e)=>this.onChange(e,"placeOfBirth")} name='placeOfBirth' >
+                        <select className="textLong" defaultValue={data.placeOfBirth} onChange={(e)=>this.onChange(e,"placeOfBirth")} name='placeOfBirth' >
                             {MYstates.map((state,key)=>(
-                                <option key={key} value={state}>{state}</option>
+                                <option key={key} value={state} selected={data.placeOfBirth === state}>{state}</option>
                             ))}
                         </select>
                         <input className="textLong" type="text" value={data.parentName} placeholder="Parent / Next-Of-Kin name" onChange={(e)=>this.onChange(e,"parentName")}></input>
                         <input className="textLong" type="text" value={data.parentIC} placeholder="Parent / Next-Of-Kin IC number" onChange={(e)=>this.onChange(e,"parentIC")}></input>
-                        <select className="textLong" selected={data.citizenship} onChange={(e)=>this.onChange(e,"citizenship")} name="citizenship">
+                        <select className="textLong" defaultValue={data.citizenship} onChange={(e)=>this.onChange(e,"citizenship")} name="citizenship">
                             <option value=''></option>
-                            <option value='malaysian'>Malaysian</option>
-                            <option value='nonmalaysian'>Non Malaysian</option>
+                            <option value='Malaysian'>Malaysian</option>
+                            <option value='Nonmalaysian'>Non Malaysian</option>
                         </select>
                         
                         <button className="submitBttn" onClick={()=>this.onSubmit(this.state.userData)}>Register</button>
