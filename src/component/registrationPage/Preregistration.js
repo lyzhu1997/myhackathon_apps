@@ -20,19 +20,25 @@ class Preregistration extends React.Component{
         this.setState({IC:e.target.value})
     }
 
+    handleOnclick(e){
+        const { submitICRegistration } = this.props;
+        e.preventDefault();
+        submitICRegistration(this.state.IC);
+    }
+
     render(){
         const { submitICRegistration,isSubmit } = this.props;
         return (
             <div className="bg">
-                <form>
+                {!isSubmit&&(<form>
                     <div className="form-group row">
-                        <label className="col-sm-2 col-form-label" onClick={()=>submitICRegistration(this.state.IC)} >Enter IC</label>
+                        <label className="col-sm-2 col-form-label">Enter IC</label>
                         <div className="col-sm-10">
                             <input className="form-control" type='text' name='ic' onChange={(e)=>this.onChange(e)}/><br/>
                         </div>
                     </div>
-                    <button className="btn btn-primary center" onClick={()=>submitICRegistration(this.state.IC)}>Submit</button>
-                </form>
+                    <button className="btn btn-primary center" onClick={(e)=>this.handleOnclick(e)}>Submit</button>
+                </form>)}
                 {isSubmit && <Registration/>}
             </div>
         )
