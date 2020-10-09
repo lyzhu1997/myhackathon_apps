@@ -1,0 +1,58 @@
+.main-content {
+    margin-top: 20%;
+}
+
+.h-100 {
+    height: 100vh;
+}
+
+h2{
+    font-size: 36px;
+    color: #1372A8;
+    font-weight: 700;
+}
+
+.signin-form {
+    height: 200px;
+    width: 50%;
+    margin: 30px auto 50px;
+}
+
+.signin-form input {
+    width: 100%;
+    height: 50px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    background-color: #F7F8F9;
+    border-radius: 10px;
+    border: solid #9F9E9E 1px;
+}
+
+.signin-form button {
+    width: 100%;
+    height: 50px;
+    font-weight: 600px;
+    background-color: #2190CF;
+    color: white;
+    margin-top: 15px;
+}
+
+.forgot-password {
+    font-size: 14px;
+    float: right;
+    margin-top: -15px;
+    margin-bottom: 20px;
+}
+
+.cover-img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+/* Existed in home.css */
+.brand-logo {
+    height: 45px;
+    width: 77.075px;
+    margin-left: 15px;
+    margin-top: 15px;
+}

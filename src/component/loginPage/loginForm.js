@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from "react-redux";
 import { isLoginIntoAcc, isRegisWithMyid, logIntoAcc } from "../../actions/loginFormActions";
-import './login.css';
 import Preregistration from "../registrationPage/Preregistration.js";
 import Homepage from "../Homepage/Homepage.js";
+import './loginForm.css';
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -43,25 +43,38 @@ class LoginForm extends React.Component {
             return( 
                 <div>
                 {(!isRegis && !isLoggedIn) && (
-                    <div className="rectangle2">
-                        <form>
-                            <div className="title">LOGIN PAGE</div>
-                            <input type="text" className="textLong" placeholder="Enter name" onChange={(e)=>this.handleChange(e, "username")}/>
-                            <input type="password" className="textLong" placeholder="Enter password"/>
-                            
-                            <button type="submit" className="submitBttn" onClick={(e)=>this.handleSubmit(e, false)}>
-                                Login
-                            </button>
-                            <button type="submit" className="submitBttn"  onClick={(e)=>this.handleSubmit(e, true)}>
-                                Login With MYID
-                            </button>
-                        </form>
+                    <div className="container-fluid">
+                    <div className="row h-100">
+                        <div className="col-5">
+                            <img className="brand-logo" src={require("../../assets/Logo.png")} alt="logo"/>
+                            <div className="main-content">
+                                <h2 className="text-center">Sign In</h2>
+                                <form className="signin-form">
+                                        <input type="text" placeholder="IC" onChange={(e)=>this.handleChange(e, "username")}/>
+                                        <input type="password" placeholder="password"/>
+                                        <button type="submit" className="btn" onClick={(e)=>this.handleSubmit(e, false)}>
+                                            Sign In
+                                        </button>
+                                        <button type="submit" className="btn"  onClick={(e)=>this.handleSubmit(e, true)}>
+                                            Sign in With MYID
+                                        </button>
+                                    </form>
+                            </div>
+                        </div>
+                        <div class="col-7 px-0">
+                            <img class="cover-img" src={require("../../assets/cover.jpg")} alt="cover image"/>
+                        </div>
                     </div>
-                    )}
-                {isRegis && <Preregistration/>}
-                {isLoggedIn && <Homepage/>}
+                    </div>
+
+
+                )}                        
+
+                <div>
+                    {isRegis && <Preregistration/>}
+                    {isLoggedIn && <Homepage/>}
                 </div>
-                    
+                </div>
             )
     };
 }

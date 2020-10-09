@@ -33,7 +33,7 @@ class Profile extends React.Component {
                                 <div class="card-body profile-card-body">
                                     <div class="row ma-3">
                                         <div class="col-4">
-                                            <img class="profile-pic" src="./assets/Profile_pic.png" alt=""/>
+                                            <img class="profile-pic" src={require("../../assets/Profile_pic.png")} alt=""/>
                                         </div>
                                         <div class="col-8">
                                             <table>
@@ -75,11 +75,4 @@ class Profile extends React.Component {
     };
 }
 
-const mapStateToProps = (state,ownProps) => state.profile;
-const mapDispatchToProps = (dispatch) => {
-    return{
-
-    }
-}
-
-export default connect(mapStateToProps,mapDispatchToProps)(Profile);
+export default Profile;
