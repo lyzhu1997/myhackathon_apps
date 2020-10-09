@@ -56,7 +56,7 @@ class LoginForm extends React.Component {
                                             Sign In
                                         </button>
                                         <button type="submit" className="btn"  onClick={(e)=>this.handleSubmit(e, true)}>
-                                            Sign in With MYID
+                                            Sign up With MYID
                                         </button>
                                     </form>
                             </div>
