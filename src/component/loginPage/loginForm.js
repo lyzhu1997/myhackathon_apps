@@ -45,7 +45,7 @@ class LoginForm extends React.Component {
                 <div className="container-fluid">
                 <div className="row h-100">
                     <div className="col-5">
-                    <img class="brand-logo" src="../src/assets/Logo.png" alt="logo"/>
+                    <img class="brand-logo" src="../../assets/Logo.png" alt="logo"/>
                 {(!isRegis && !isLoggedIn) && (
                 <div className="main-content">
                 <form className="signin-form">

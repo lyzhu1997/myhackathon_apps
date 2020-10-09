@@ -2,10 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { appStartRun, appSuccessfullyLaunched } from "../../actions/appStartActions"
 import './Homepage.css';
-<<<<<<< HEAD
 import Profile from '../Profile/Profile.js'; 
-=======
->>>>>>> 7670ac10b713ef448adb33c145bbf6fb94f3afa4
 import Service from '../Service/Service.js';
 import {
     BrowserRouter as Router,
@@ -13,7 +10,6 @@ import {
     Route,
     Link
   } from "react-router-dom";
-  import Profile from "../Profile/Profile"; 
 
 
 class Homepage extends React.Component{
