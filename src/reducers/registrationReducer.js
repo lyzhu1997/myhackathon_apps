@@ -13,7 +13,8 @@ const initialState={
     matchIC:false,
     isSubmit:false,
     data:{
-        name:"",
+        firstName:"",
+        lastName:"",
         ic:"",
         dob:"",
         placeOfBirth:"",

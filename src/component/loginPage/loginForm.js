@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { isLoginIntoAcc, isRegisWithMyid, logIntoAcc } from "../../actions/loginFormActions";
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Preregistration from "../registrationPage/Preregistration.js";
-import DummyWebPage from "../dummyWebPage/dummyWebpage.js";
+import Homepage from "../Homepage/Homepage.js";
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -62,7 +62,7 @@ class LoginForm extends React.Component {
                         </button>
                 </form>)}
                 {isRegis && <Preregistration/>}
-                {isLoggedIn && <DummyWebPage/>}
+                {isLoggedIn && <Homepage/>}
                 </div>
                     
             )

@@ -1,0 +1,95 @@
+/*------------------ HEADER -------------------------*/
+
+nav{
+    height:65px;
+}
+
+.brand-logo{
+    height:45px;
+    margin-left: 10px;
+}
+
+.blue-nav{
+    background-color:#2190CF;
+}
+
+.navbar-nav a{
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+.nav-search-bar{
+    border-radius: 15px;
+    width:250px !important;
+}
+
+/*------------------- BODY -------------------------*/
+
+h1 {
+    color: #1372A8;
+}
+
+.my-container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+.carousel {
+    height: 400px !important;
+}
+
+.carousel-item img{
+    height: 400px;
+    object-fit: cover;
+}
+
+.card-img-top{
+    height: 230px;
+    object-fit: cover;
+}
+
+.card-body ul {
+    padding-inline-start: 10px;
+}
+
+.card-body ul li{
+    list-style-type: none !important;
+    color: #828282;
+    font-size: 14px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.banner {
+    background-color: #BAE4FC;
+    padding: 10px 0px 5px;
+    margin: 2rem 0;
+}
+
+.second-row{
+    margin: 50px;
+}
+
+.h-400px {
+    height:400px
+}
+
+/*------------------- FOOTER -------------------------*/
+.footer-nav {
+    height: 300px;
+    background-color: #2190CF;
+}
+
+.footer-bar {
+    height: 80px;
+    background-color: #125D88;
+    color: white !important;
+    text-align: center;
+    padding-top: 30px;
+}
+
+
+.footer-nav h5 {
+    color: white;
+    text-decoration: underline;
+}
