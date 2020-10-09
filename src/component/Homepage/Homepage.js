@@ -2,15 +2,16 @@ import { connect } from "react-redux";
 import { appStartRun, appSuccessfullyLaunched } from "../../actions/appStartActions"
 import React from "react";
 import './Homepage.css';
-import { Profile } from '../Profile/Profile.js'; 
-import { Service } from '../Service/Service.js';
+import Service from '../Service/Service.js';
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Link
   } from "react-router-dom";
-  
+  import Profile from "../Profile/Profile"; 
+
+
 class Homepage extends React.Component{
 
     constructor(props){
