@@ -1,9 +1,8 @@
 import React from 'react';
 import './App.css';
-import { connect,useDispatch } from "react-redux";
-import Preregistration from './component/registrationPage/Preregistration.js';
+import { connect } from "react-redux";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import DummyWebPage from "./component/dummyWebPage/dummyWebpage";
+import LoginForm from './component/loginPage/loginForm.js';
 
 class App extends React.Component {
   render(){
@@ -12,7 +11,7 @@ class App extends React.Component {
         <div className="App">
           <div className="auth-wrapper">
             <div className="auth-inner">
-              <Preregistration />
+              <LoginForm />
             </div>
           </div>
         </div>

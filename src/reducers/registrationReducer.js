@@ -27,6 +27,7 @@ const initialState={
 }
 
 const registrationReducer = (state=initialState,action) =>{
+    console.log(state)
     switch(action.type){
         case LAUNCHING_REGISTRATION_PAGE:
             return{
@@ -48,7 +49,7 @@ const registrationReducer = (state=initialState,action) =>{
                     ...state,
                     IC:action.IC,
                     matchIC:true,
-                    data:dataChecked,
+                    data:dataChecked.data,
                     isSubmit:true
                 }
             else return{

@@ -1,7 +1,5 @@
 import React from 'react';
-import { useForm } from 'react-hook-form';
 import './registration.css';
-import data from '../../data';
 import { connect } from 'react-redux';
 
 class Registration extends React.Component {
@@ -41,51 +39,12 @@ class Registration extends React.Component {
     }
 
     onChange(e,item) {
-        switch(item){
-            case "name":
-                this.setState({userData:{
-                    ...this.state.userData,
-                    Name:item
-                }});
-                break;
-            case "ic":
-                this.setState({userData:{
-                    ...this.state.userData,
-                    IC:item,
-                }});
-            case "dob":
-                this.setState({userData:{
-                    ...this.state.userData,
-                    dob:item,
-                }});
-            case "placeOfBirth":
-                this.setState({userData:{
-                    ...this.state.userData,
-                    placeOfBirth:item,
-                }});
-            case "parentName":
-                this.setState({userData:{
-                    ...this.state.userData,
-                    parentName:item,
-                }});
-            case "parentIC":
-                this.setState({userData:{
-                    ...this.state.userData,
-                    parentIC:item,
-                }});
-            case "citizenship":
-                this.setState({userData:{
-                    ...this.state.userData,
-                    citizenship:item,
-                }});
-            default:
-                break;
-        }
+        this.setState({userData:{...this.state.userData, [item]: e.target.value}})
     }
 
     onSubmit = (data) => console.log(data);
     render(){
-        const {MYstates} = this.state;
+        const {userData, MYstates} = this.state;
         return (
             <div className="bg">
                 <div>
@@ -93,14 +52,14 @@ class Registration extends React.Component {
                         <div className="form-group row">
                             <label className="col-sm-2 col-form-label" onClick={()=>this.onSubmit(this.state.userData)}>Name</label>
                             <div className="col-sm-10">
-                                <input className="form-control" type='text' name='name' onChange={(e)=>this.onChange(e,"name")}/><br/>
+                                <input className="form-control" type='text' value={userData.name} name='name' onChange={(e)=>this.onChange(e,"name")}/><br/>
                             </div>
                         </div>
                         
                         <div className="form-group row">
                             <label className="col-sm-2 col-form-label">IC</label>
                             <div className="col-sm-10">
-                                <input className="form-control" type='text' name='ic' onChange={(e)=>this.onChange(e,"ic")}/><br/>
+                                <input className="form-control" type='text' value={MYstates.IC} name='ic' onChange={(e)=>this.onChange(e,"ic")}/><br/>
                             </div>
                         </div>
                         
@@ -114,7 +73,7 @@ class Registration extends React.Component {
                         <div className="form-group row">
                             <label className="col-sm-2 col-form-label">Place of Birth</label>
                             <div className="col-sm-10">
-                                <select className="form-control" onChange={(e)=>this.onChange(e,"placeOfBirth")} name='placeOfBirth' >
+                                <select className="form-control" onChange={(e)=>this.onChange(e,"placeOfBirth")} value={MYstates.placeOfBirth} name='placeOfBirth' >
                                     {MYstates.map((state)=>(
                                         <option value={state}>{state}</option>
                                     ))}
