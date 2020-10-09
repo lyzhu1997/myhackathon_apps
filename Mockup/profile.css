@@ -1,0 +1,44 @@
+h1 {
+    color: #1372A8;
+}
+
+.profile-body {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.profile-card {
+    margin-top: 30px;
+}
+
+.profile-card-body {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.profile-pic {
+    width: 200px;
+    border-radius: 15px;
+}
+
+.nav-link.active {
+    font-weight: 700;
+}
+
+tr td{
+    padding: 10px;
+}
+tr td:nth-child(1){
+    font-weight: 700;
+}
+
+.footer-nav h5 {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-bar {
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+}
