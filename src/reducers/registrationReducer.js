@@ -49,26 +49,23 @@ const registrationReducer = (state=initialState,action) =>{
                     ...state,
                     IC:action.IC,
                     matchIC:true,
-                    data:dataChecked.data,
-                    isSubmit:true
+                    data:dataChecked.data
                 }
             else return{
                 ...state,
                 IC:action.IC,
-                matchIC:false,
-                isSubmit:true
+                matchIC:false
             }
 
         case IC_MATCHED_REGISTRATION:
             return{
                 ...state,
-                data:action.data
+                isSubmit:true
             }
 
         case IC_NOT_MATCH_REGISTRATION:
             return{
                 ...state,
-                data:action.data
             }
 
         default:

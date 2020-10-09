@@ -4,13 +4,14 @@ import { connect } from "react-redux";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import LoginForm from './component/loginPage/loginForm.js';
 import Registration from "./component/registrationPage/Registration";
+import Homepage from './component/Homepage/Homepage';
 
 class App extends React.Component {
   render(){
     return( 
       <React.Fragment>
         <div className="App">
-              <LoginForm />
+          <LoginForm />
             </div>
       </React.Fragment>
     )

@@ -29,10 +29,9 @@ export function submitRegistration(Data){
 }
 
 export const IC_MATCHED_REGISTRATION = "IC_MATCHED_REGISTRATION";
-export function icMatchedRegistration(Data){
+export function icMatchedRegistration(){
     return{
         type:IC_MATCHED_REGISTRATION,
-        data:Data
     }
 }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 import { isLoginIntoAcc, isRegisWithMyid, logIntoAcc } from "../../actions/loginFormActions";
-import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import './login.css';
 import Preregistration from "../registrationPage/Preregistration.js";
 import Homepage from "../Homepage/Homepage.js";
 
@@ -42,25 +42,22 @@ class LoginForm extends React.Component {
             const {isRegis, isLoggedIn} = this.props;
             return( 
                 <div>
-                {(!isRegis && !isLoggedIn) && (<form>
-                        <h3>Login Page</h3>
-                        <div className="form-group">
-                            <label>Name:</label>
-                            <input type="text" className="form-control" placeholder="Enter name" onChange={(e)=>this.handleChange(e, "username")}/>
-                        </div>
-                        <div className="form-group">
-                            <label>
-                                Password:
-                            </label>
-                            <input type="password" className="form-control" placeholder="Enter password"/>
-                        </div>
-                        <button type="submit" className="btn btn-primary btn-block" onClick={(e)=>this.handleSubmit(e, false)}>
-                            Login
-                        </button>
-                        <button type="submit" className="btn btn-primary btn-block"  onClick={(e)=>this.handleSubmit(e, true)}>
-                            Login With MYID
-                        </button>
-                </form>)}
+                {(!isRegis && !isLoggedIn) && (
+                    <div className="rectangle2">
+                        <form>
+                            <div className="title">LOGIN PAGE</div>
+                            <input type="text" className="textLong" placeholder="Enter name" onChange={(e)=>this.handleChange(e, "username")}/>
+                            <input type="password" className="textLong" placeholder="Enter password"/>
+                            
+                            <button type="submit" className="submitBttn" onClick={(e)=>this.handleSubmit(e, false)}>
+                                Login
+                            </button>
+                            <button type="submit" className="submitBttn"  onClick={(e)=>this.handleSubmit(e, true)}>
+                                Login With MYID
+                            </button>
+                        </form>
+                    </div>
+                    )}
                 {isRegis && <Preregistration/>}
                 {isLoggedIn && <Homepage/>}
                 </div>
